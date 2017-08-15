@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		50458AEE1F42436D00AE0C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50458AED1F42436D00AE0C57 /* AppDelegate.swift */; };
-		50458AF01F42436D00AE0C57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50458AEF1F42436D00AE0C57 /* ViewController.swift */; };
 		50458AF31F42436D00AE0C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50458AF11F42436D00AE0C57 /* Main.storyboard */; };
 		50458AF51F42436D00AE0C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50458AF41F42436D00AE0C57 /* Assets.xcassets */; };
 		50458AF81F42436D00AE0C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50458AF61F42436D00AE0C57 /* LaunchScreen.storyboard */; };
@@ -23,12 +22,13 @@
 		50B2FBDB1F435DAE003B3F58 /* Proxima Nova Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD41F435DAE003B3F58 /* Proxima Nova Semibold.ttf */; };
 		50B2FBDC1F435DAE003B3F58 /* Proxima Nova Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD51F435DAE003B3F58 /* Proxima Nova Thin.ttf */; };
 		50B2FBE01F4368E1003B3F58 /* PhotosDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBDF1F4368E1003B3F58 /* PhotosDataController.swift */; };
+		50B2FBE21F438080003B3F58 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBE11F438080003B3F58 /* PhotoDetailViewController.swift */; };
+		50B2FBE51F438796003B3F58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBE31F4380A2003B3F58 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50458AEA1F42436D00AE0C57 /* HomeStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50458AED1F42436D00AE0C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50458AEF1F42436D00AE0C57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50458AF21F42436D00AE0C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50458AF41F42436D00AE0C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50458AF71F42436D00AE0C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		50B2FBD41F435DAE003B3F58 /* Proxima Nova Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Semibold.ttf"; path = "fonts/Proxima Nova Semibold.ttf"; sourceTree = "<group>"; };
 		50B2FBD51F435DAE003B3F58 /* Proxima Nova Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.ttf"; path = "fonts/Proxima Nova Thin.ttf"; sourceTree = "<group>"; };
 		50B2FBDF1F4368E1003B3F58 /* PhotosDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosDataController.swift; path = "Data Controller/PhotosDataController.swift"; sourceTree = "<group>"; };
+		50B2FBE11F438080003B3F58 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoDetailViewController.swift; path = ViewControllers/PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		50B2FBE31F4380A2003B3F58 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 		50458AFF1F434B0900AE0C57 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				50458AEF1F42436D00AE0C57 /* ViewController.swift */,
+				50B2FBE31F4380A2003B3F58 /* ViewController.swift */,
+				50B2FBE11F438080003B3F58 /* PhotoDetailViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -224,9 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B2FBE51F438796003B3F58 /* ViewController.swift in Sources */,
 				50B2FBE01F4368E1003B3F58 /* PhotosDataController.swift in Sources */,
-				50458AF01F42436D00AE0C57 /* ViewController.swift in Sources */,
 				50B2FBCA1F435612003B3F58 /* DataModel.swift in Sources */,
+				50B2FBE21F438080003B3F58 /* PhotoDetailViewController.swift in Sources */,
 				50458AEE1F42436D00AE0C57 /* AppDelegate.swift in Sources */,
 				50B2FBC41F43555B003B3F58 /* PhotoCollectionViewCell.swift in Sources */,
 				50B2FBCC1F4356B6003B3F58 /* Photo.swift in Sources */,

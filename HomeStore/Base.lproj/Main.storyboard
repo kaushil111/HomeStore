@@ -12,6 +12,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Proxima Nova Regular.ttf">
+            <string>ProximaNovaA-Regular</string>
+        </array>
         <array key="Proxima Nova Semibold.ttf">
             <string>ProximaNova-Semibold</string>
         </array>
@@ -118,18 +121,32 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jQt-2g-88w"/>
                                 </connections>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrP-xn-y7s">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="34Z-6O-dKf">
+                                        <rect key="frame" x="169.5" y="315.5" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TL9-cR-GEo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BBH-pZ-wse"/>
+                            <constraint firstItem="YrP-xn-y7s" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="CQF-Ba-FRn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TL9-cR-GEo" secondAttribute="bottom" id="ECu-y5-fY0"/>
+                            <constraint firstItem="YrP-xn-y7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nf6-Ty-Zzv"/>
                             <constraint firstItem="q1f-Zb-XPJ" firstAttribute="top" secondItem="dD3-OY-bcN" secondAttribute="bottom" constant="10" id="SHj-6G-1bz"/>
+                            <constraint firstItem="YrP-xn-y7s" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SlG-E3-8z1"/>
                             <constraint firstItem="q1f-Zb-XPJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Un0-KQ-zxl"/>
                             <constraint firstItem="TL9-cR-GEo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wd9-Zn-Oh5"/>
                             <constraint firstItem="dD3-OY-bcN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hLZ-ia-m3g"/>
                             <constraint firstItem="dD3-OY-bcN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lqh-cf-Ipa"/>
                             <constraint firstAttribute="trailing" secondItem="dD3-OY-bcN" secondAttribute="trailing" id="ls0-8i-CDJ"/>
                             <constraint firstItem="TL9-cR-GEo" firstAttribute="top" secondItem="q1f-Zb-XPJ" secondAttribute="bottom" constant="10" id="o2k-Wi-JT3"/>
+                            <constraint firstItem="YrP-xn-y7s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tyn-SW-4tV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d7A-QL-rg5">
@@ -140,12 +157,135 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityView" destination="YrP-xn-y7s" id="Zmx-1c-siI"/>
                         <outlet property="photosCollectionView" destination="TL9-cR-GEo" id="Ipr-5Y-Kxx"/>
+                        <segue destination="jvs-qx-ebr" kind="show" identifier="showDetails" id="FwO-ho-Nzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1007.2" y="38.23088455772114"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="RtP-MH-S0N">
+            <objects>
+                <viewController id="jvs-qx-ebr" customClass="PhotoDetailViewController" customModule="HomeStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="art-W0-MiY"/>
+                        <viewControllerLayoutGuide type="bottom" id="yVO-Kd-5vF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m2U-Ks-CFy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwa-Mu-Ghp">
+                                <rect key="frame" x="25" y="84" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nwa-Mu-Ghp" secondAttribute="height" multiplier="1:1" id="xng-Cx-6Ij"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my title text temporarily" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXK-80-dAD">
+                                <rect key="frame" x="-0.5" y="429" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="paT-cG-ury"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                <color key="textColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dun-qh-lEc">
+                                <rect key="frame" x="-0.5" y="477" width="375" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CCV-lF-Moo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                <color key="textColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-xt-3uu">
+                                <rect key="frame" x="9.5" y="505" width="355" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="rSg-VS-ejI"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-XV-hTH">
+                                <rect key="frame" x="9.5" y="514" width="355" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <color key="textColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaA-Regular" family="Proxima Nova Alt" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj3-Ly-amo">
+                                <rect key="frame" x="9.5" y="578" width="355" height="44"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="smW-YQ-j2y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                <state key="normal" title="ADD TO CART">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCartTapped:" destination="jvs-qx-ebr" eventType="touchUpInside" id="xUC-lM-d0B"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bI7-Xd-cfG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Zuw-oK-2Wy">
+                                        <rect key="frame" x="169.5" y="315.5" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KXK-80-dAD" firstAttribute="top" secondItem="nwa-Mu-Ghp" secondAttribute="bottom" constant="20" id="9D5-6s-cIB"/>
+                            <constraint firstItem="nwa-Mu-Ghp" firstAttribute="centerX" secondItem="m2U-Ks-CFy" secondAttribute="centerX" id="G0Y-lX-2qg"/>
+                            <constraint firstItem="oj3-Ly-amo" firstAttribute="width" secondItem="m2U-Ks-CFy" secondAttribute="width" constant="-20" id="G8Q-uB-wWS"/>
+                            <constraint firstItem="KXK-80-dAD" firstAttribute="centerX" secondItem="m2U-Ks-CFy" secondAttribute="centerX" id="JPY-7K-Q5h"/>
+                            <constraint firstItem="Dun-qh-lEc" firstAttribute="top" secondItem="KXK-80-dAD" secondAttribute="bottom" constant="8" id="K5h-Zw-Lzs"/>
+                            <constraint firstItem="oj3-Ly-amo" firstAttribute="top" secondItem="hhH-XV-hTH" secondAttribute="bottom" constant="8" id="Pk2-x5-1ci"/>
+                            <constraint firstItem="zKc-xt-3uu" firstAttribute="centerX" secondItem="m2U-Ks-CFy" secondAttribute="centerX" id="QgI-XH-IET"/>
+                            <constraint firstItem="zKc-xt-3uu" firstAttribute="width" secondItem="m2U-Ks-CFy" secondAttribute="width" constant="-20" id="Uu5-hp-WfI"/>
+                            <constraint firstItem="Dun-qh-lEc" firstAttribute="width" secondItem="m2U-Ks-CFy" secondAttribute="width" id="W01-Rd-nF5"/>
+                            <constraint firstItem="hhH-XV-hTH" firstAttribute="top" secondItem="zKc-xt-3uu" secondAttribute="bottom" constant="8" id="c3g-Ih-Wzu"/>
+                            <constraint firstItem="hhH-XV-hTH" firstAttribute="width" secondItem="m2U-Ks-CFy" secondAttribute="width" constant="-20" id="gzJ-Id-aVk"/>
+                            <constraint firstItem="KXK-80-dAD" firstAttribute="width" secondItem="m2U-Ks-CFy" secondAttribute="width" id="o0s-d1-fi2"/>
+                            <constraint firstItem="zKc-xt-3uu" firstAttribute="top" secondItem="Dun-qh-lEc" secondAttribute="bottom" constant="8" id="oSe-Pn-mIB"/>
+                            <constraint firstItem="Dun-qh-lEc" firstAttribute="centerX" secondItem="m2U-Ks-CFy" secondAttribute="centerX" id="qNV-Dh-OPE"/>
+                            <constraint firstItem="oj3-Ly-amo" firstAttribute="centerX" secondItem="m2U-Ks-CFy" secondAttribute="centerX" id="sZl-YR-Li7"/>
+                            <constraint firstItem="hhH-XV-hTH" firstAttribute="centerX" secondItem="m2U-Ks-CFy" secondAttribute="centerX" id="sjC-Ll-MI9"/>
+                            <constraint firstItem="nwa-Mu-Ghp" firstAttribute="top" secondItem="art-W0-MiY" secondAttribute="bottom" constant="20" id="y56-4D-pMa"/>
+                            <constraint firstItem="nwa-Mu-Ghp" firstAttribute="width" secondItem="m2U-Ks-CFy" secondAttribute="width" constant="-50" id="zuQ-WR-EEr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="q1s-Ya-Baw">
+                        <barButtonItem key="leftBarButtonItem" image="back" id="p5T-FE-jBX">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="jvs-qx-ebr" id="pTB-1P-TIq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="shopping-cart" id="te3-Kj-QWD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityView" destination="bI7-Xd-cfG" id="583-yp-TgC"/>
+                        <outlet property="addToCartButton" destination="oj3-Ly-amo" id="sne-ke-lsi"/>
+                        <outlet property="cost" destination="Dun-qh-lEc" id="nR2-Nf-Be0"/>
+                        <outlet property="imageView" destination="nwa-Mu-Ghp" id="Mci-m5-JK4"/>
+                        <outlet property="photoDescription" destination="hhH-XV-hTH" id="MtQ-7L-QRZ"/>
+                        <outlet property="photoTitle" destination="KXK-80-dAD" id="5Eh-9s-V4c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XbR-6F-eod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C6C-9f-hnq">
@@ -169,6 +309,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="16" height="16"/>
         <image name="menu_icon" width="16" height="16"/>
         <image name="search" width="16" height="16"/>
         <image name="shopping-cart" width="16" height="16"/>

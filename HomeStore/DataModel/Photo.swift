@@ -16,10 +16,10 @@ class Photo {
     var serverID = ""
     var farmID = ""
     var secret = ""
-    var imgURL = ""
     var cost = ""
     
     static let size = "q"
+    static let largeSize = "n"
     static let photoType = "jpg"
     
     convenience init(dictionary: Dictionary<String, Any>) {
@@ -42,8 +42,6 @@ class Photo {
         
         cost = "\(arc4random_uniform(300))"
         
-        self.imgURL = getImgURL()
-        
     }
     
     
@@ -53,9 +51,19 @@ class Photo {
         return "https://farm\(farmID).staticflickr.com/\(serverID)/\(id)_\(secret)_\(Photo.size).\(Photo.photoType)"
     }
     
+    private func getLargeImgURL() -> String {
+        return "https://farm\(farmID).staticflickr.com/\(serverID)/\(id)_\(secret)_\(Photo.largeSize).\(Photo.photoType)"
+    }
+    
     func setImage(completionHandler: @escaping (_ data: Data) -> Swift.Void) {
-        URLSession.shared.dataTask(with: URL(string: imgURL)!) { (data, response, error) in
+        URLSession.shared.dataTask(with: URL(string: getImgURL())!) { (data, response, error) in
             completionHandler(data!)
-        }.resume()
+            }.resume()
+    }
+    
+    func setLargeImage(completionHandler: @escaping (_ data: Data) -> Swift.Void) {
+        URLSession.shared.dataTask(with: URL(string: getLargeImgURL())!) { (data, response, error) in
+            completionHandler(data!)
+            }.resume()
     }
 }

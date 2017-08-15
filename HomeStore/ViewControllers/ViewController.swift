@@ -13,6 +13,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let dataCtrl = PhotosDataController()
 
     @IBOutlet weak var photosCollectionView: UICollectionView!
+    
+    @IBOutlet weak var activityView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,15 +29,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Initial Setup
+    
     func setTitle() {
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "Logo"))
     }
     
+    //MARK: Fetch Photos
     func fetchPhotos() {
+        activityView.isHidden = false
         dataCtrl.dataModel.getPhotos { (photos) in
             self.dataCtrl.listOfPhotos = photos
              DispatchQueue.main.async {
                 self.photosCollectionView.reloadData()
+                self.activityView.isHidden = true
+
             }
         }
     }
@@ -68,6 +77,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
+    //MARK: Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: dataCtrl.listOfPhotos[indexPath.row])
+    }
+    
+    //MARK: Prepare for Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let detailViewController : PhotoDetailViewController = segue.destination as! PhotoDetailViewController
+            
+            detailViewController.photo = sender as? Photo
+        }
+    }
     
     
     //MARK: Status Bar
