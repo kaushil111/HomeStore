@@ -12,6 +12,17 @@
 		50458AF31F42436D00AE0C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50458AF11F42436D00AE0C57 /* Main.storyboard */; };
 		50458AF51F42436D00AE0C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50458AF41F42436D00AE0C57 /* Assets.xcassets */; };
 		50458AF81F42436D00AE0C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50458AF61F42436D00AE0C57 /* LaunchScreen.storyboard */; };
+		50B2FBC41F43555B003B3F58 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBC31F43555B003B3F58 /* PhotoCollectionViewCell.swift */; };
+		50B2FBCA1F435612003B3F58 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBC91F435612003B3F58 /* DataModel.swift */; };
+		50B2FBCC1F4356B6003B3F58 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBCB1F4356B6003B3F58 /* Photo.swift */; };
+		50B2FBD61F435DAE003B3F58 /* Proxima Nova Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBCF1F435DAE003B3F58 /* Proxima Nova Black.ttf */; };
+		50B2FBD71F435DAE003B3F58 /* Proxima Nova Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD01F435DAE003B3F58 /* Proxima Nova Bold.ttf */; };
+		50B2FBD81F435DAE003B3F58 /* Proxima Nova Condensed Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD11F435DAE003B3F58 /* Proxima Nova Condensed Semibold.ttf */; };
+		50B2FBD91F435DAE003B3F58 /* Proxima Nova Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD21F435DAE003B3F58 /* Proxima Nova Regular.ttf */; };
+		50B2FBDA1F435DAE003B3F58 /* Proxima Nova ScOsf Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD31F435DAE003B3F58 /* Proxima Nova ScOsf Thin.ttf */; };
+		50B2FBDB1F435DAE003B3F58 /* Proxima Nova Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD41F435DAE003B3F58 /* Proxima Nova Semibold.ttf */; };
+		50B2FBDC1F435DAE003B3F58 /* Proxima Nova Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B2FBD51F435DAE003B3F58 /* Proxima Nova Thin.ttf */; };
+		50B2FBE01F4368E1003B3F58 /* PhotosDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B2FBDF1F4368E1003B3F58 /* PhotosDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +33,17 @@
 		50458AF41F42436D00AE0C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50458AF71F42436D00AE0C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50458AF91F42436D00AE0C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B2FBC31F43555B003B3F58 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = Views/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		50B2FBC91F435612003B3F58 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = DataModel/DataModel.swift; sourceTree = "<group>"; };
+		50B2FBCB1F4356B6003B3F58 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = DataModel/Photo.swift; sourceTree = "<group>"; };
+		50B2FBCF1F435DAE003B3F58 /* Proxima Nova Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Black.ttf"; path = "fonts/Proxima Nova Black.ttf"; sourceTree = "<group>"; };
+		50B2FBD01F435DAE003B3F58 /* Proxima Nova Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Bold.ttf"; path = "fonts/Proxima Nova Bold.ttf"; sourceTree = "<group>"; };
+		50B2FBD11F435DAE003B3F58 /* Proxima Nova Condensed Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Condensed Semibold.ttf"; path = "fonts/Proxima Nova Condensed Semibold.ttf"; sourceTree = "<group>"; };
+		50B2FBD21F435DAE003B3F58 /* Proxima Nova Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Regular.ttf"; path = "fonts/Proxima Nova Regular.ttf"; sourceTree = "<group>"; };
+		50B2FBD31F435DAE003B3F58 /* Proxima Nova ScOsf Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova ScOsf Thin.ttf"; path = "fonts/Proxima Nova ScOsf Thin.ttf"; sourceTree = "<group>"; };
+		50B2FBD41F435DAE003B3F58 /* Proxima Nova Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Semibold.ttf"; path = "fonts/Proxima Nova Semibold.ttf"; sourceTree = "<group>"; };
+		50B2FBD51F435DAE003B3F58 /* Proxima Nova Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.ttf"; path = "fonts/Proxima Nova Thin.ttf"; sourceTree = "<group>"; };
+		50B2FBDF1F4368E1003B3F58 /* PhotosDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosDataController.swift; path = "Data Controller/PhotosDataController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,11 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49D23112AE62ED084F20BECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50458AE11F42436D00AE0C57 = {
 			isa = PBXGroup;
 			children = (
 				50458AEC1F42436D00AE0C57 /* HomeStore */,
 				50458AEB1F42436D00AE0C57 /* Products */,
+				49D23112AE62ED084F20BECA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +85,64 @@
 			isa = PBXGroup;
 			children = (
 				50458AED1F42436D00AE0C57 /* AppDelegate.swift */,
-				50458AEF1F42436D00AE0C57 /* ViewController.swift */,
-				50458AF11F42436D00AE0C57 /* Main.storyboard */,
+				50458B011F434B3100AE0C57 /* Data Model */,
+				50B2FBDE1F4368B5003B3F58 /* Data Controllers */,
+				50458AFF1F434B0900AE0C57 /* View Controller */,
+				50458B001F434B1F00AE0C57 /* Storyboard and Views */,
 				50458AF41F42436D00AE0C57 /* Assets.xcassets */,
+				50B2FBDD1F435DB9003B3F58 /* Fonts */,
 				50458AF61F42436D00AE0C57 /* LaunchScreen.storyboard */,
 				50458AF91F42436D00AE0C57 /* Info.plist */,
 			);
 			path = HomeStore;
+			sourceTree = "<group>";
+		};
+		50458AFF1F434B0900AE0C57 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50458AEF1F42436D00AE0C57 /* ViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		50458B001F434B1F00AE0C57 /* Storyboard and Views */ = {
+			isa = PBXGroup;
+			children = (
+				50458AF11F42436D00AE0C57 /* Main.storyboard */,
+				50B2FBC31F43555B003B3F58 /* PhotoCollectionViewCell.swift */,
+			);
+			name = "Storyboard and Views";
+			sourceTree = "<group>";
+		};
+		50458B011F434B3100AE0C57 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				50B2FBC91F435612003B3F58 /* DataModel.swift */,
+				50B2FBCB1F4356B6003B3F58 /* Photo.swift */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		50B2FBDD1F435DB9003B3F58 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				50B2FBCF1F435DAE003B3F58 /* Proxima Nova Black.ttf */,
+				50B2FBD01F435DAE003B3F58 /* Proxima Nova Bold.ttf */,
+				50B2FBD11F435DAE003B3F58 /* Proxima Nova Condensed Semibold.ttf */,
+				50B2FBD21F435DAE003B3F58 /* Proxima Nova Regular.ttf */,
+				50B2FBD31F435DAE003B3F58 /* Proxima Nova ScOsf Thin.ttf */,
+				50B2FBD41F435DAE003B3F58 /* Proxima Nova Semibold.ttf */,
+				50B2FBD51F435DAE003B3F58 /* Proxima Nova Thin.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		50B2FBDE1F4368B5003B3F58 /* Data Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50B2FBDF1F4368E1003B3F58 /* PhotosDataController.swift */,
+			);
+			name = "Data Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +204,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B2FBD61F435DAE003B3F58 /* Proxima Nova Black.ttf in Resources */,
+				50B2FBDB1F435DAE003B3F58 /* Proxima Nova Semibold.ttf in Resources */,
+				50B2FBDC1F435DAE003B3F58 /* Proxima Nova Thin.ttf in Resources */,
 				50458AF81F42436D00AE0C57 /* LaunchScreen.storyboard in Resources */,
 				50458AF51F42436D00AE0C57 /* Assets.xcassets in Resources */,
+				50B2FBD91F435DAE003B3F58 /* Proxima Nova Regular.ttf in Resources */,
+				50B2FBDA1F435DAE003B3F58 /* Proxima Nova ScOsf Thin.ttf in Resources */,
 				50458AF31F42436D00AE0C57 /* Main.storyboard in Resources */,
+				50B2FBD81F435DAE003B3F58 /* Proxima Nova Condensed Semibold.ttf in Resources */,
+				50B2FBD71F435DAE003B3F58 /* Proxima Nova Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B2FBE01F4368E1003B3F58 /* PhotosDataController.swift in Sources */,
 				50458AF01F42436D00AE0C57 /* ViewController.swift in Sources */,
+				50B2FBCA1F435612003B3F58 /* DataModel.swift in Sources */,
 				50458AEE1F42436D00AE0C57 /* AppDelegate.swift in Sources */,
+				50B2FBC41F43555B003B3F58 /* PhotoCollectionViewCell.swift in Sources */,
+				50B2FBCC1F4356B6003B3F58 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +391,7 @@
 				50458AFE1F42436D00AE0C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

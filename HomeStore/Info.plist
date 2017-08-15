@@ -28,11 +28,23 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Proxima Nova Black.ttf</string>
+		<string>Proxima Nova Bold.ttf</string>
+		<string>Proxima Nova Thin.ttf</string>
+		<string>Proxima Nova Semibold.ttf</string>
+		<string>Proxima Nova ScOsf Thin.ttf</string>
+		<string>Proxima Nova Regular.ttf</string>
+		<string>Proxima Nova Condensed Semibold.ttf</string>
 	</array>
 </dict>
 </plist>
